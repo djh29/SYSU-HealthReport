@@ -3,7 +3,7 @@ from selenium import webdriver
 from util import get_img1
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
-from util import recognize
+#from util import recognize
 from retrying import retry
 
 driver = webdriver.Firefox(service=Service(f"{os.environ['GITHUB_ACTION_PATH']}/geckodriver.exe"))
