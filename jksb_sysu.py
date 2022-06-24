@@ -76,7 +76,7 @@ if __name__ == "__main__":
         result = '健康申报失败'
         print(result)
     driver.quit()
-    service1.stop()
+    #service1.stop()
 
     # 判断是否发送通知
     if bot_token in ['False', '']:
