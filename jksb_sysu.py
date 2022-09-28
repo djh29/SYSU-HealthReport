@@ -59,7 +59,11 @@ def jksb():
     print("点击下一步")
     driver.find_element(By.XPATH, '//*[@id="form_command_bar"]/li[1]').click()
     time.sleep(15)
-
+    try:
+        # 如果有未打钩的情况下需要再执行多一步
+        self.driver.find_element(By.ID,'V1_CTRL335').click()
+    except:
+        pass
     print("提交健康申报")
     driver.find_element(By.XPATH, '//*[@id="form_command_bar"]/li[1]').click()
     time.sleep(15)
