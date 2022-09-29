@@ -61,8 +61,7 @@ def jksb():
     time.sleep(15)
     print("提交健康申报")
     driver.find_element(By.XPATH, '//*[@id="form_command_bar"]/li[1]').click()
-    time.sleep(10)
-    driver.find_element(By.XPATH,'//*[@class="dialog_footer"]/button').click()
+    time.sleep(15)
     try:
         # 如果有未打钩的情况下需要再执行多一步
         driver.find_element(By.ID,'V1_CTRL335').click()
@@ -74,6 +73,7 @@ def jksb():
         pass
     time.sleep(15)
     result = driver.find_element(By.XPATH, '//div[8]/div/div[1]/div[2]').text
+    driver.find_element(By.XPATH,'//*[@class="dialog_footer"]/button').click()
     print("完成健康申报")
     return f'{number}: {result}'
 
